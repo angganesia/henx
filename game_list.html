@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- my css -->
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .jarak-menu {
+      padding-bottom: 30px;
+    }
+
+    nav {
+      padding-top: -10px;
+    }
+
+    .c-bg-1 {
+      background: #387aff;
+    }
+
+    .c-bg-2 {
+      background: #272727;
+    }
+
+    .c-tc-1 {
+      color: #387aff;
+    }
+
+    .c-tc-2 {
+      color: #272727;
+    }
+
+    .c-bgc {
+      background-color: #387aff;
+    }
+
+    body {
+      font-size: 14px;
+      font-weight: 400;
+      background-color: #e7e7e7;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+
+    .deco1 {
+      margin-top: -20px;
+      position: absolute;
+      width: 100%;
+      height: 150px;
+      z-index: -1;
+      box-shadow: 2px 2px 9px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel-member {
+      margin-top: 70px;
+      background: white;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .custom--frame {
+      border-radius: 10px 10px 10px 10px;
+      box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .marquee {
+      margin-top: -10px;
+      height: 40px;
+      width: 100%;
+    }
+
+    hr {
+      margin-bottom: 15px;
+    }
+
+    .menu {
+      font-size: 12px;
+      font-weight: 500;
+      padding-bottom: 20px;
+    }
+
+    .menu img {
+      border-radius: 10px;
+    }
+
+    .menu h5 {
+      padding-top: 10px;
+    }
+
+    .menu h6 {
+      margin-top: -10px;
+    }
+
+    /*SALDO*/
+    .currSign:before {
+      content: "Rp ";
+    }
+
+    .spinner-grow {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .titl {
+      color: #387aff;
+    }
+
+    .nomor {
+      border: none;
+      border-radius: 10px;
+      color: #000000;
+      padding: 2px;
+      border-bottom: 1px solid black;
+      width: 100%;
+      background-color: #387aff;
+    }
+
+    .base {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    input.nomor:focus {
+      outline: none;
+      color: #000000;
+      border-bottom: 1px solid #387aff;
+    }
+
+    select.nomor:focus {
+      outline: none;
+    }
+
+    .diamond {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .klik {
+      border-bottom: 1px solid #387aff;
+      color: #387aff;
+    }
+
+    .produk:hover {
+      background-color: #387aff;
+      color: white;
+    }
+
+    .produk {
+      color: black;
+      transition: 0.3s;
+    }
+
+    .produk h6 {
+      color: #387aff;
+    }
+
+    .harga {
+      margin-bottom: -1vw;
+      font-size: 4vw;
+    }
+
+    .namapro {
+      font-size: 5vw;
+    }
+
+    .bulet {
+      width: 2vw;
+      height: 2vw;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+    }
+
+    .ubah {
+      width: 100%;
+      background-color: rgba(53, 94, 178, 0.19);
+      color: #387aff;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .konfir {
+      width: 100%;
+      background-color: #387aff;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .modal {
+      height: 0px;
+    }
+
+    .detail {
+      margin-top: -20px;
+    }
+
+    .pilih {
+      color: #387aff;
+      margin-top: 1vw;
+    }
+
+    .kr {
+      height: auto;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border: none;
+    }
+
+    .pisah {
+      width: 100%;
+      height: 10px;
+      background-color: #fafafa;
+    }
+
+    .detail {
+      margin-top: -20px;
+    }
+
+    .satu {
+      font-weight: bold;
+      border-bottom: 1px solid #387aff;
+      width: 100%;
+      color: #387aff;
+    }
+
+    .dua {
+      width: 100%;
+    }
+
+    .small {
+      color: #6e6e6e;
+      font-size: 5vw;
+    }
+
+    .kanan {
+      text-align: left;
+    }
+
+    .kiri {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+
+  <nav class="navbar fixed-top c-bg-1 navbar-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" hidden>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand me-auto ms-2" href="#">
+        <h4>Games</h4>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarText" hidden>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#--1">Reguler</a>
+          </li>
+          <li class="nav-item" hidden>
+            <a class="nav-link" href="#--2">Voucher dan Kartu Perdana</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--3">Tagihan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--4">Dompet Digital</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--5">Produk Lainnya</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--6">Games</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <div style="height:70px;"></div>
+
+  <div class="container mb-3 form-floating" hidden>
+    <input class="form-control" type="text" name="search" id="filter" class="nomor" placeholder=" Cari Game disini">
+    <label class="ms-3">Cari Game disini</label>
+  </div>
+
+
+  <!-- games -->
+  <div class="container bg-white">
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white menu">
+      <div class="col-12">
+        <h5 class="bg-white">Topup Via ID</h5>
+        <hr />
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124090')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1635831739-icon-appicon_ob30.jpg" alt="free fire" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Free Fire</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124091')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1621158341-icon-MLBB.png" alt="mobile legends" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Mobile Legends</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124119')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571814213-icon-1563952412-icon-higg.jpg" alt="higgs domino" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Higgs Domino</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124092')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1592228250-icon-pubgm.jpg" alt="pubg mobile" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>PUBG M</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/126355')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571816318-icon-1557980499-icon-1545014860-icon-shell-garena-20.jpg" alt="garena shell" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Garena Shell</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/126415')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1645066883-icon-WeChat%20Image_20220217093952.jpg" alt="genshin impact" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Genshin Impact</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134763')">
+        <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/hago_tile.jpg" alt="hago" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>HAGO</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134764')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1640937066-icon-1637211854-icon-kecilin_kecilin_image.png" alt="LUDO" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>LUDO</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134767')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571814166-icon-1562124639-icon-AOV-Logo-300x300.jpg" alt="arena of valor" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Arena Of Valor</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134768')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1602655944-icon-dragon-raja.jpg" alt="dragon raja" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Dragon Raja</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/129467')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1557983938-icon-1531706501-icon-League%20of%20Legends.png" alt="league of legends" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>LOL Wildrift (SEA)</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134777')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571814027-icon-1559011491-icon-1557743544-icon-point_blank.jpg" alt="point blank" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Point Blank</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134799')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571814260-icon-1565939578-icon-ICON300X300%E7%9B%B4%E8%A7%92.jpg" alt="lord mobile" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Lord Mobile</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134772')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1622191978-icon-RO-game-logo.jpg" alt="ragnarok mobile" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Ragnarok Mobile</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134798')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1633599388-icon-Icon_1024.jpg" alt="call of duty mobile" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Call Of Duty Mobile</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/129594')">
+        <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/valorant_tile.jpg" alt="dragon raja" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Valorant (SEA)</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134826')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1630466391-icon-Sausage%20Man.png.jpg" alt="dragon raja" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Sausage Man</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/135174')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571814048-icon-1559208720-icon-au2.jpg" alt="dragon raja" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>AU2 Mobile</a>
+      </div>
+    </div>
+  </div>
+  <!-- end games -->
+  <!-- voucher games -->
+  <div class="container bg-white mt-3">
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white menu">
+      <div class="col-12">
+        <h5 class="bg-white">Voucher Games</h5>
+        <hr />
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/126515')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1595314249-icon-PlayStore_icon.jpg" alt="Google play card" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Google Play Card</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/134747')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571813694-icon-1557979752-icon-1548658605-icon-indo-play-300x300-px.jpg" alt="indoplay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>IndoPlay</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/135423')">
+        <img src="https://i.ibb.co/qWFP0HW/razer-gold.jpg" alt="indoplay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Razer Gold</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/135168')">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1607654683-icon-1582087478-icon-UniPin_160x160.jpg" alt="indoplay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Unipin</a>
+      </div>
+      <div class="col mb-3" onclick="mt()">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571816393-icon-1560327152-icon-1527952060-icon-icon-2-09.jpg" alt="indoplay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Roblox</a>
+      </div>
+      <div class="col mb-3" onclick="mt()">
+        <img src="https://cdn.unipin.com/images/icon_product_pages/1571816304-icon-1557980468-icon-1544065394-icon-MA-180622-4_Game_Logo_300x300-74.jpg" alt="indoplay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Steam</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/135690')">
+        <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/megaxus_tile.jpg" alt="indoplay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Megaxus</a>
+      </div>
+    </div>
+  </div>
+  <!-- voucher games end -->
+  <script>
+    function redirect(url) {
+      location.href = url;
+    }
+
+
+    // idr
+    let xsaldo = document.querySelectorAll(".mySALDO");
+    for (let i = 0, len = xsaldo.length; i < len; i++) {
+      let num = Number(xsaldo[i].innerHTML).toLocaleString("id");
+      xsaldo[i].innerHTML = num;
+      xsaldo[i].classList.add("currSign");
+    }
+    
+    function mt() {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "error",
+          title: "Produk dalam pemeliharaan !",
+        });
+      }
+  </script>
+  <script>
+    $(document).ready(function() {
+      $("#filter").keyup(function() {
+        var filter = $(this).val(),
+          count = 0;
+
+        // Loop through the comment list
+        $("ul li").each(function() {
+
+          // If the list item does not contain the text phrase fade it out
+          if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+            $(this).fadeOut();
+
+            // Show the list item if the phrase matches and increase the count by 1
+          } else {
+            $(this).show();
+            count++;
+          }
+        });
+
+        // Update the count
+        var numberItems = count;
+
+      });
+    });
+  </script>
+  <!-- swalfire -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.19/dist/sweetalert2.all.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>
+
+</html>
