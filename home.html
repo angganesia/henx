@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henx - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- my css -->
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap");
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .jarak-menu {
+      padding-bottom: 30px;
+    }
+
+    nav {
+      padding-top: -10px;
+    }
+
+    .c-bg-1 {
+      background: #387aff;
+    }
+
+    .c-bg-2 {
+      background: #272727;
+    }
+
+    .c-tc-1 {
+      color: #387aff;
+    }
+
+    .c-tc-2 {
+      color: #272727;
+    }
+
+    .c-bgc {
+      background-color: #387aff;
+    }
+
+    body {
+      font-size: 14px;
+      font-weight: 400;
+      background-color: #e7e7e7;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+
+    .deco1 {
+      margin-top: -20px;
+      position: absolute;
+      width: 100%;
+      height: 150px;
+      z-index: -1;
+      box-shadow: 2px 2px 9px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel-member {
+      margin-top: 70px;
+      background: white;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .custom--frame {
+      border-radius: 10px 10px 10px 10px;
+      box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .marquee {
+      margin-top: -10px;
+      height: 40px;
+      width: 100%;
+    }
+
+    hr {
+      margin-bottom: 15px;
+    }
+
+    .menu {
+      font-size: 12px;
+      font-weight: 500;
+      padding-bottom: 20px;
+    }
+
+    .menu img {
+      border-radius: 10px;
+    }
+
+    .menu h5 {
+      padding-top: 10px;
+    }
+
+    .menu h6 {
+      margin-top: -10px;
+    }
+
+    /*SALDO*/
+    .currSign:before {
+      content: "Rp ";
+    }
+
+    .spinner-grow {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .titl {
+      color: #387aff;
+    }
+
+    .nomor {
+      border: none;
+      border-radius: 10px;
+      color: #000000;
+      padding: 2px;
+      border-bottom: 1px solid black;
+      width: 100%;
+      background-color: #387aff;
+    }
+
+    .base {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    input.nomor:focus {
+      outline: none;
+      color: #000000;
+      border-bottom: 1px solid #387aff;
+    }
+
+    select.nomor:focus {
+      outline: none;
+    }
+
+    .diamond {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .klik {
+      border-bottom: 1px solid #387aff;
+      color: #387aff;
+    }
+
+    .produk:hover {
+      background-color: #387aff;
+      color: white;
+    }
+
+    .produk {
+      color: black;
+      transition: 0.3s;
+    }
+
+    .produk h6 {
+      color: #387aff;
+    }
+
+    .harga {
+      margin-bottom: -1vw;
+      font-size: 4vw;
+    }
+
+    .namapro {
+      font-size: 5vw;
+    }
+
+    .bulet {
+      width: 2vw;
+      height: 2vw;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+    }
+
+    .ubah {
+      width: 100%;
+      background-color: rgba(53, 94, 178, 0.19);
+      color: #387aff;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .konfir {
+      width: 100%;
+      background-color: #387aff;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .modal {
+      height: 0px;
+    }
+
+    .detail {
+      margin-top: -20px;
+    }
+
+    .pilih {
+      color: #387aff;
+      margin-top: 1vw;
+    }
+
+    .kr {
+      height: auto;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border: none;
+    }
+
+    .pisah {
+      width: 100%;
+      height: 10px;
+      background-color: #fafafa;
+    }
+
+    .detail {
+      margin-top: -20px;
+    }
+
+    .satu {
+      font-weight: bold;
+      border-bottom: 1px solid #387aff;
+      width: 100%;
+      color: #387aff;
+    }
+
+    .dua {
+      width: 100%;
+    }
+
+    .small {
+      color: #6e6e6e;
+      font-size: 5vw;
+    }
+
+    .kanan {
+      text-align: left;
+    }
+
+    .kiri {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="deco1 c-bg-1"></div>
+  <nav class="navbar fixed-top c-bg-1 navbar-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" hidden>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand me-auto ms-2" href="#">
+        <h4>Hai, {{nama_user}}</h4>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarText" hidden>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#--1">Reguler</a>
+          </li>
+          <li class="nav-item" hidden>
+            <a class="nav-link" href="#--2">Voucher dan Kartu Perdana</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--3">Tagihan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--4">Dompet Digital</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--5">Produk Lainnya</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#--6">Games</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <!-- panel -->
+  <div class="container">
+    <div class="panel-member c-tc-2 mb-3">
+      <div class="container">
+        <div class="row row-cols-3 d-flex">
+          <div class="col-2 me-auto mt-3">
+            <img src="https://i.ibb.co/YBTzgm7/money-bag.gif" alt="wallet" width="50" loading="lazy" />
+          </div>
+
+          <div class="col-5 mt-3">
+            <h6>Saldo Mitra</h6>
+            <div class="w-100"></div>
+            <h5 class="currSign mySALDO">{{saldo_user}}</h5>
+          </div>
+
+          <div class="col-4 mt-4 ms-auto">
+            <a type="button" class="btn btn-outline-primary text-uppercase" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=topup')">isi saldo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row row-cols-4 mt-3 text-center">
+          <div class="col mb-2" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=profil')">
+            <img src="https://i.ibb.co/nLb0z4Z/social-media.gif" alt="akun" width="50" loading="lazy" />
+            <div class="w-100"></div>
+            <a>Akun</a>
+          </div>
+          <div class="col mb-2" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=catatan_saldo')">
+            <img src="https://i.ibb.co/sKwKmL0/shopping-cart.gif" alt="riwayat" width="50" loading="lazy" />
+            <div class="w-100"></div>
+            <a>Riwayat</a>
+          </div>
+          <div class="col mb-2" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=chat')">
+            <img src="https://i.ibb.co/HTJZQgV/support.gif" alt="bantuan" width="50" loading="lazy" />
+            <div class="w-100"></div>
+            <a>Bantuan</a>
+          </div>
+          <div class="col mb-2" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=notifikasi')">
+            <img src="https://i.ibb.co/NnPdt2y/alert.gif" alt="notif" width="50" loading="lazy" />
+            <div class="w-100"></div>
+            <a>Notif</a>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="container">
+        <div class="row marquee" onclick="info()" type="button">
+          <div class="col-1">
+            <img src="https://i.ibb.co/z4bMhvv/tech-support.gif" alt="support" width="25" loading="lazy" />
+          </div>
+
+          <div class="col">
+            <marquee class="opacity-50 pt-2" scrollamount="6">
+              <p>
+                <strong> Info Terkini </strong>
+                &emsp;&emsp;
+                <i> Jika kamu memiliki pertanyaan/kendala jangan sungkan untuk menghubungi customer servis kami </i>
+              </p>
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end panel -->
+  <!-- carousel -->
+  <div class="container mb-3">
+    <div class="row">
+      <div class="col">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active" data-bs-interval="6000">
+              <img src="https://angganesia.github.io/banner/1.jpg" class="d-block w-100" />
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+              <img src="https://angganesia.github.io/banner/2.jpg" class="d-block w-100" />
+            </div>
+            <!--<div class="carousel-item" data-bs-interval="200">
+               <img src="img/2.jpg" class="d-block w-100" alt="...">
+             </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end carousel -->
+  <!-- customer servis -->
+  <div class="container mb-3 bg-white shadow-sm">
+    <div class="row row-cols-2 justify-content-center">
+      <div class="col-8" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=chat')">
+        <div class="card-body">
+          <h2 class="c-tc-1">Punya kendala ?</h2>
+          <h6 style="color: black">Kamu bisa menghubungi tim customer servis kami</h6>
+        </div>
+      </div>
+
+      <div class="col-4 col-sm-2 ms-auto" onclick="redirect('https://henxs.bukaolshop.site/akun/?page=chat')">
+        <img src="https://i.ibb.co/z4bMhvv/tech-support.gif" alt="support" width="100%" loading="lazy" />
+      </div>
+    </div>
+    <div class="pb-2" id="--1"></div>
+  </div>
+  <!-- end customer servis -->
+  <!-- Reguler -->
+  <div class="container bg-white mt-3">
+    <h5 class="bg-white pt-2">Reguler</h5>
+    <hr />
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white">
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124035')">
+        <img src="https://i.ibb.co/qypq8J7/phone.png" alt="pulsa" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Pulsa</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/133238')">
+        <img src="https://i.ibb.co/KmvW7m7/internet.png" alt="palet internet" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Paket Internet</a>
+      </div>
+      <div class="col mb-3" onclick="mt()">
+        <img src="https://i.ibb.co/nMLx1Tw/conversation.png" alt="paket telpon" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Paket Telp</a>
+      </div>
+      <div class="col mb-3" onclick="mt()">
+        <img src="https://i.ibb.co/T8kNNk7/chat-1.png" alt="paket sms" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Paket SMS</a>
+      </div>
+      <div class="col mb-2" onclick="redirect('https://henxs.bukaolshop.site/digital/124699')" hidden>
+        <img src="https://i.ibb.co/f4xFff9/idea.png" alt="token pln" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Token PLN</a>
+      </div>
+      <div class="col mb-3" onclick="mt()">
+        <img src="https://i.ibb.co/Nnb30Mw/call.png" alt="masa aktif" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Masa Aktif</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/125415')">
+        <img src="https://i.ibb.co/bHmLt5v/emoney.png" alt="emoney" width="40" loading="lazy" />
+        <div class="w-100"></div>
+        <a>eMoney</a>
+      </div>
+    </div>
+  </div>
+  <!-- end reguler -->
+  <!-- voucher dan kartu perdana -->
+  <div class="container bg-white mt-3" hidden>
+    <h5 class="bg-white pt-2">Voucher dan Kartu Perdana</h5>
+    <hr />
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white menu">
+      <div class="col mb-2" onclick="mt()">
+        <img src="https://i.ibb.co/S08FN9H/cek-status-voucher.png" alt="akun" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Cek Status Voucher</a>
+      </div>
+      <div class="col mb-2" onclick="mt()">
+        <img src="img/inject voucher.png" alt="akun" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Voucher Internet</a>
+      </div>
+      <div class="col mb-2" onclick="mt()">
+        <img src="img/inject voucher.png" alt="akun" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Inject Voucher</a>
+      </div>
+      <div class="col mb-2" onclick="mt()">
+        <img src="img/inject kartu perdana.png" alt="akun" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Inject Kartu Perdana</a>
+      </div>
+    </div>
+  </div>
+  <!-- end voucher dan kartu perdana -->
+  <!-- tagihan -->
+  <div class="container bg-white mt-3">
+    <h5 class="bg-white pt-2">Tagihan</h5>
+    <hr />
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white">
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/125124')">
+        <img src="https://i.ibb.co/hWYb7cp/bpjs.png" alt="BPJS" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>BPJS</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/125125')">
+        <img src="https://i.ibb.co/ZHZVgfX/gas-negara.png" alt="gas negara pgn" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Gas Negara (PGN)</a>
+      </div>
+      <div class="col mb-3" onclick="mt()" hidden>
+        <img src="https://i.ibb.co/ZHZVgfX/gas-negara.png" alt="pertagas gas" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Pertagas (GAS)</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124699')">
+        <img src="https://i.ibb.co/5WnFhkn/pln.png" alt="PLN" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>PLN</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/125123')">
+        <img src="https://i.ibb.co/PZbTVxZ/telkom.png" alt="telkom dan indihome" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Internter Pascabayar</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/125126')">
+        <img src="https://i.ibb.co/QD1C1y3/tv-berbayar.png" alt="tv berbayar" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>TV Berbayar</a>
+      </div>
+      <div class="col mb-3" onclick="mt()">
+        <img src="https://i.ibb.co/SJ3FrtY/tagihan-seluler.png" alt="Tagihan Seluler" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Tagihan Seluler</a>
+      </div>
+      <div class="col mb-3" onclick="redirect('https://henxs.bukaolshop.site/digital/124694')">
+        <img src="https://i.ibb.co/cCwqGDD/pdam.png" alt="PDAM" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>PDAM</a>
+      </div>
+    </div>
+  </div>
+  <!-- end tagihan -->
+  <!-- dompet digital -->
+  <div class="container bg-white mt-3" hidden>
+    <h5 class="bg-white pt-2">Dompet Digital</h5>
+    <hr />
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white menu">
+      <div class="col mb-2" onclick="m()">
+        <img src="img/dana.png" alt="DANA" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>DANA</a>
+      </div>
+      <div class="col mb-2" onclick="n()">
+        <img src="img/ovo.png" alt="OVO" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>OVO</a>
+      </div>
+      <div class="col mb-2" onclick="o()">
+        <img src="img/linkaja.png" alt="link aja" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>LinkAja</a>
+      </div>
+      <div class="col mb-2" onclick="p()">
+        <img src="img/shopee.png" alt="shopee pay" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Shopee Pay</a>
+      </div>
+      <div class="col mb-2" onclick="q()">
+        <img src="img/shopee.png" alt="shopee driver" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Shopee Driver</a>
+      </div>
+      <div class="col mb-2" onclick="r()">
+        <img src="img/maxim.png" alt="maxim driver" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Maxim Driver</a>
+      </div>
+      <div class="col mb-2" onclick="s()">
+        <img src="img/grab.png" alt="Grab Penumpang" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Grab Penumpang</a>
+      </div>
+      <div class="col mb-2" onclick="t()">
+        <img src="img/grab.png" alt="Grab driver" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Grab Driver</a>
+      </div>
+      <div class="col mb-2" onclick="u()">
+        <img src="img/gojek.png" alt="gojek penumpang" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Gojek Penumpang</a>
+      </div>
+      <div class="col mb-2" onclick="v()">
+        <img src="img/gojek.png" alt="gojek driver" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Gojek Driver</a>
+      </div>
+      <div class="col mb-2" onclick="w()">
+        <img src="img/doku.png" alt="doku" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Doku</a>
+      </div>
+      <div class="col mb-2" onclick="x()">
+        <img src="img/sakuku.png" alt="sakuku" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Sakuku</a>
+      </div>
+      <div class="col mb-2" onclick="y()">
+        <img src="img/isaku.png" alt="i saku" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>I-saku</a>
+      </div>
+    </div>
+  </div>
+  <!-- end dompet digital -->
+  <!-- produk lainnya -->
+  <div class="container bg-white mt-3" hidden>
+    <h5 class="bg-white pt-2">Produk Lainnya</h5>
+    <hr />
+    <div class="row row-cols-4 row-cols-sm-6 text-center bg-white menu">
+      <div class="col mb-2" onclick="z()">
+        <img src="img/xxi.png" alt="saldo mtix xxi" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Saldo MTIX XXI</a>
+      </div>
+      <div class="col mb-2" onclick="aa()">
+        <img src="img/tapcash.png" alt="bni tapcash" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>BNI TapCash</a>
+      </div>
+      <div class="col mb-2" onclick="ab()">
+        <img src="img/brizzi.png" alt="bni brizzi" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>BRI BRIZZI</a>
+      </div>
+      <div class="col mb-2" onclick="ac()">
+        <img src="img/mandiri e-money.png" alt="mandiri emoney" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Mandiri Emoney</a>
+      </div>
+      <div class="col mb-2" onclick="ad()">
+        <img src="img/wifi id.png" alt="wifi id" width="50" loading="lazy" />
+        <div class="w-100"></div>
+        <a>Wifi Id</a>
+      </div>
+    </div>
+  </div>
+  <!-- end produk lainnya -->
+
+  <script>
+    function redirect(url) {
+      location.href = url;
+    }
+
+    function info() {
+      Swal.fire({
+        imageUrl: "https://i.ibb.co/z4bMhvv/tech-support.gif",
+        imageWidth: "100",
+        imageHeight: "100",
+        title: "Info Terkini",
+        text: "Jika kamu memiliki pertanyaan/kendala jangan sungkan untuk menghubungi customer servis kami",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Hubungi",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          redirect("https://henxs.bukaolshop.site/akun/?page=chat");
+        }
+      });
+    }
+
+    function mt() {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: "error",
+        title: "Produk dalam pemeliharaan !",
+      });
+    }
+
+    // idr
+    let xsaldo = document.querySelectorAll(".mySALDO");
+    for (let i = 0, len = xsaldo.length; i < len; i++) {
+      let num = Number(xsaldo[i].innerHTML).toLocaleString("id");
+      xsaldo[i].innerHTML = num;
+      xsaldo[i].classList.add("currSign");
+    }
+  </script>
+  <!-- swalfire -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.19/dist/sweetalert2.all.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

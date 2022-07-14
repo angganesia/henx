@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLN</title>
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+</style>
+<script src="https://hprstopupcentre.com/solusi-media/api/js/smpls.js"></script>
+<style>
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #fff;
+}
+*{
+margin: 0;
+}
+.ard {
+z-index: -1;
+paddinf: 20px;
+}
+.fr{
+  background:#387AFF;
+  color:#fff;
+  border-radius:5px 0px 0px 5px;
+  box-shadow:0px 2px 8px -3px rgba(0,0,0,0.3);
+  margin-right:-10px;
+  padding:5px;
+}
+.produk_pulsa{
+padding: 10px; 
+padding-left: 15px;
+padding-top: 5px;
+border-radius: 10px;
+margin: 0px; 
+margin-top: 15px;
+box-shadow: 0px 2px 8px -3px rgba(0,0,0,0.3);
+margin-bottom: 5px;
+background: #fff;
+font-family: 'Source Sans Pro', sans-serif;
+ 
+}
+.produk_pulsa h2{
+  margin-top: 7px;
+  font-size: 13px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+.produk_pulsa p{
+  font-size: 12px;
+  margin-top: 5px;
+  color: #bdbbbf;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.produk_pulsa h3{
+  font-size: 14px;
+  float: right;
+  margin-top: -27px;
+  padding-right: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+.kotak3 {
+background: #fff;
+z-index: 3;
+padding: 35px;
+padding-left: 10px;
+padding-right: 10px;
+box-shadow: 2px 3px 4px 1px rgba(0,0,0,0.2);
+margin: 20px;
+margin-top: 0px;
+margin-bottom: 10px;
+margin-left: 40px;
+margin-right: 40px;
+border-radius: 50px;
+}
+
+.kotak {
+margin-top: -80px;
+padding: 10px;
+border-radius: 15px;
+margin: 20px;
+box-shadow: 0px 3px 12px -7px rgba(0,0,0,0.5);
+margin-bottom: 5px;
+background: #fff;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.judul3 {
+position: absolute;
+font-family: 'Source Sans Pro', sans-serif;
+font-weight: 400;
+color: #5b5a5c;
+font-size: 18px;
+margin-top: -20px;
+margin-left: 20px;
+}
+
+.desc3 {
+position: absolute;
+font-family: 'Source Sans Pro', sans-serif;
+color: #bbb;
+font-size: 12px;
+margin-top: 5px;
+margin-left: 20px;
+}
+
+.gambar3 {
+width: 50px;
+height: 50px;
+position: absolute;
+border-radius: 100px;
+box-shadow: 0px 0px 7px 0.5px rgba(0,0,0,0.2);
+margin-top: -28px;
+right: 50px;
+background: #fff;
+padding: 3px;
+}
+
+.tombol3 {
+width: 30px;
+background: #fff;
+color: #387AFF;
+height: auto;
+position: absolute;
+border-radius: 100px;
+box-shadow: 2px 1px 5px 0.5px rgba(0,0,0,0.3);
+margin-top: -17px;
+right: 25px;
+text-align: center;
+padding: 5px;
+font-weight: bold;
+}
+
+.atas {
+ background: #387AFF ;
+ position:absolute;
+ width: 100%;
+ height: 60px;
+ z-index:-1;
+ border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;
+ box-shadow: 2px 2px 6px -1px rgba(0,0,0,0.2);
+}
+
+.input_konten input{
+  width: 95%;
+  border: none;
+  border-bottom: 2px solid #bbb;
+  font-size: 18px;
+  margin-left: 2.5%;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  outline: none;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.cek {
+float: right;
+margin-top: -3px;
+border: none;
+color: #fff;
+font-weight: bold;
+border-radius: 30px;
+background: #387AFF;
+margin-right: 10px;
+padding-bottom: 5px;
+padding-top: 5px;
+padding-left: 10px;
+padding-right: 10px;
+font-size: 13px;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+::placeholder {
+  color: #d2ccde;
+}
+
+
+.collapsible {
+  background-color: #387AFF;
+  color: white;
+  float: right;
+  cursor: none;
+  margin-top: -3px;
+  border: none;
+  text-align: left;
+  outline: none;
+  border-radius: 100px;
+  font-size: 15px;
+  width: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.active, .collapsible:hover {
+  background-color: #387AFF;
+}
+
+.collapsible:after {
+  content: '\003f';
+  color: white;
+}
+
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color: #fff;
+  
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+   width: 48%;
+   font-weight: bold;
+   background: #ece9f2;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #5b5a5c;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 1%;
+    padding: 7px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tab button.active {
+  background-color: #387AFF;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.tabcontent {
+  display: none;
+  border-top: none;
+  
+}
+	/*SALDO*/
+		.currSign:before {
+			content: 'Rp ';
+		}
+</style>
+
+
+
+<div class="atas" ></div>
+<br>
+<div class="kotak3">
+<img class="gambar3"src="https://i.ibb.co/8sphGb7/20220609-041948.jpg" alt="" />
+<div class="judul3">Saldo saya</div>
+ <div class="desc3 mySALDO" >{{saldo_user}}</div>
+</div>
+
+<div class="kotak" style="margin-top: 15px;">
+<div class="tab">
+  <button class="tablinks active" onclick="openCity(event, 'Dmn')">Prabayar</button>
+  <button class="tablinks" onclick="openCity(event, 'MM')">Pascabayar</button>
+</div>
+</div>
+
+        <form class="input_konten">
+<div class="kotak" id="kotakstik" >
+  <p style="font-size: 14px;margin-left: 5px;margin-bottom: 3px;margin-top: 2px;font-weight: bold;color: #5b5a5c;">Nomer Meter / ID Pelanggan</p>
+        <input style="font-size: 15px;margin-top: 5px;width: 200px; " onkeyup="alertInfoNews()" type="number" name="nomor" id="nomor" placeholder="0123456789"  oninput="cekNomorTelponUser()" value=""  />
+         
+        <!--<button onclick="cekid()" type="button" class="kotak" style="border:none;background-color: #387AFF;color:white;">Cek ID</button></div>-->
+        </form>
+      
+      <!--<div class="kotak"  id="cetak_nickname">
+        <span id="nickname">Nickname</span>
+      </div>-->
+</div>
+
+
+<div id="Dmn" class="tabcontent" style="display: block;">
+  
+
+
+<div style="margin-top: 0px;padding: 20px;padding-top: 0px;" id="produk_diamond">
+
+
+
+</div>
+</div>
+
+
+
+<div style="margin-top: 0px;padding: 20px;padding-top: 0px;">
+<div id="MM" class="tabcontent">
+<div  id="produk_member">
+
+
+
+</div>
+
+     
+    
+     
+
+
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="pulsa.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+ function kirimData(urlLink) {
+const catatan = "?catatan=";
+const nomor = document.getElementById('nomor').value;
+  if (nomor == null || nomor == "0858" || nomor.length < 1 || nomor == "" || nomor == "0" || nomor == "none") {
+}
+else{window.location.href=urlLink+catatan+nomor;
+ }}
+    </script>
+    
+    
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+/*function cekid(){
+                var nickname = document.getElementById('nickname');
+                var cetak = document.getElementById('cetak_nickname');
+                var idgame = document.getElementById('nomor').value;
+                
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+
+                        var xa = xhr.responseText;
+                        var nick = xa.replace(/(?:\r\n|\r|\n)/g, '');
+                        if (xa.length != 1) {
+                            cetak.style.display="block";
+                            nickname.innerText = nick;
+                        }else{
+                          cetak.style.display="none";
+                          alert('Id Player Tidak Ditemukan');
+                        }
+                    }
+
+                }
+                xhr.open('GET', 'https://solusi-media.my.id/api/cekidgame/freefire.php?id=' + idgame , true);
+                xhr.send();
+        };*/
+        var link = "https://henx.bukaolshop.site";
+ var aktivasi = "Solusimedia8990";
+
+$.getJSON(url+'token-pln-296151'+'&link=' + link + '&token=' + aktivasi, function (data) {
+    for (let i = 0; i < data.length; i++) {
+                    var nama = data[i]['Judul'];
+                    var id_produk = data[i]['link'];
+                    var harga = data[i]['harga'];
+                    $('#rol').remove();
+                    $('#produk_diamond').append(`
+                        <div class="produk_pulsa"
+                        onclick="kirimData('`+link+`/produk/`+id_produk+`')">
+                        <h2>`+nama+`</h2>
+                        <p>`+harga+`</p>
+                        <h3 class="fr">READY</h3>
+                        </div>
+     
+                        `)
+                }
+
+                });
+
+
+$.getJSON(url+'pln-pascabayar-296178'+'&link=' + link + '&token=' + aktivasi, function (data) {
+    for (let i = 0; i < data.length; i++) {
+                    var nama = data[i]['Judul'];
+                    var id_produk = data[i]['link'];
+                    var harga = data[i]['harga'];
+                    $('#rol').remove();
+                    $('#produk_member').append(`
+                        <div class="produk_pulsa"
+                        onclick="kirimData('`+link+`/produk/`+id_produk+`')">
+                        <h2>`+nama+`</h2>
+                        <p>`+harga+`</p>
+                        <h3 class="fr">CEK</h3>
+                        </div>
+     
+                        `)
+                }
+
+                });
+</script>
+    	<!-- Javascript code Mata uang Rupiah -->
+	<script>
+		let x = document.querySelectorAll(".mySALDO");
+		for (let i = 0, len = x.length; i < len; i++) {
+			let num = Number(x[i].innerHTML)
+					.toLocaleString('id');
+			x[i].innerHTML = num;
+			x[i].classList.add("currSign");
+		}
+	</script>
+</body>
+</html>
