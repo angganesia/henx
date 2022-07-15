@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script>
+    var link = "https://henxs.bukaolshop.site"; // Link Tokomu
+    var aktivasi = "Solusimedia8990"; //Kode Aktivasi dari Solusi Media
+    var cekkodegame = "https://solusi-media.my.id/api/freefire.php?id="; //Url kode Api Cek Game
+    var produk1 = ""; //kosongkan jika operator di isi dan isi jika operator kosong
+    var opbyu = "310963"; // Byu
+    var optsel = "310962"; //Telkomsel
+    var opisat = "310964"; //Indosat
+    var optri = "310971"; //Tri
+    var opaxis = "297603"; //Axis
+    var opxl = "310972"; //XL
+    var opsmart = "310965"; //Smartfren
+    
+    const titel = "Pulsa"; //title
+    const inptUser = "Masukan Nomor";//input user
+  </script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title id="title"></title>
+  <style>
+    body {
+      background-color: #e7e7e7;
+    }
+
+    .c-bg-1 {
+      background-color: #387aff;
+    }
+
+    .titl {
+      color: #387aff;
+    }
+
+    .nomor {
+      border: none;
+      border-radius: 10px;
+      color: #000000;
+      padding: 2px;
+      border-bottom: 1px solid black;
+      width: 100%;
+      background-color: #387aff;
+    }
+
+    .base {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    input.nomor:focus {
+      outline: none;
+      color: #000000;
+      border-bottom: 1px solid #387aff;
+    }
+
+    select.nomor:focus {
+      outline: none;
+    }
+
+    .diamond {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .klik {
+      border-bottom: 1px solid #387aff;
+      color: #387aff;
+    }
+
+    .produk:hover {
+      background-color: #387aff;
+      color: white;
+    }
+
+    .produk {
+      color: black;
+      transition: 0.3s;
+    }
+
+    .produk h6 {
+      color: #387aff;
+    }
+
+    .harga {
+      margin-bottom: -1vw;
+      font-size: 4vw;
+    }
+
+    .namapro {
+      font-size: 5vw;
+    }
+
+    .bulet {
+      width: 2vw;
+      height: 2vw;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+    }
+
+    .ubah {
+      width: 100%;
+      background-color: rgba(53, 94, 178, 0.19);
+      color: #387aff;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .konfir {
+      width: 100%;
+      background-color: #387aff;
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+
+    .modal {
+      height: 0px;
+    }
+
+    .detail {
+      margin-top: -20px;
+    }
+
+    .pilih {
+      color: #387aff;
+      margin-top: 1vw;
+    }
+
+    .kr {
+      height: auto;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border: none;
+    }
+
+    .pisah {
+      width: 100%;
+      height: 10px;
+      background-color: #fafafa;
+    }
+
+    .detail {
+      margin-top: -20px;
+    }
+
+    .satu {
+      font-weight: bold;
+      border-bottom: 1px solid #387aff;
+      width: 100%;
+      color: #387aff;
+    }
+
+    .dua {
+      width: 100%;
+    }
+
+    .small {
+      color: #6e6e6e;
+      font-size: 5vw;
+    }
+
+    .kanan {
+      text-align: left;
+    }
+
+    .kiri {
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="c-bg-1 shadow-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-3 mb-3">
+          <form class="form-floating" method="get" action="https://hprstopupcentre.com/solusi-media/api/valid" onkeypress="return event.keyCode != 13">
+            <input type="number" id="nomor" class="form-control is-invalid mb-3" placeholder="12345" />
+            <label class="inptUser1"></label>
+            <div class="row">
+              <div class="col-5 btn-Cek" hidden>
+                <button onclick="cekid()" type="button" class="btn p-2 btn-light" style="border:none;width: 100% ;">Cek ID</button>
+              </div>
+              <div class="col-5 btn-Loading d-none">
+                <button class="btn btn-light p-2" style="width: 100%;" type="button">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
+              </div>
+              <div class="col-7" hidden>
+                <div class="p-2 ms-auto bg-white rounded ">
+                  <label>Nick : </label>
+                  <span style="width: 100%;border:none;" id="nickname">
+                    <label id="tidak_valid">. . .</label>
+                  </span>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="row">
+              <div class="col-12 mt-3">
+                <select class="form-select form-select-sm p-2" aria-label="Default select example" id="produk" onchange="tampil_produk('0')">
+                  <option selected>Pilih Produk</option>
+                </select>
+              </div>
+
+              <div class="col-6" hidden>
+                <select class="form-select form-select-sm" aria-label="pilih server" id="server">
+                  <!-- <option>Pilih server</option>
+                  <option value="AME">America Server</option>
+                  <option value="EU">Europe Server</option>
+                  <option value="ASIA">Asia Server</option>
+                  <option value="CN">TW, HK, MO Server</option> -->
+                </select>
+              </div>
+            </div>
+            <!-- offcanvas -->
+            <div style="height:auto;border-radius: 20px 20px 0 0;border:none;" class="offcanvas kr offcanvas-bottom" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1" id="bayar" aria-labelledby="offcanvasBottomLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Informasi Pelanggan</h5>
+              </div>
+              <div class="offcanvas-body small">
+                <div class="row detail">
+                  <div class="col-6 kanan">ID Player</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end" id="player1">Misal</span>
+                  </div>
+
+                  <!-- <div class="col-6 kanan">Nickname</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end" id="nick">none</span>
+                  </div> -->
+                  <br />
+                  <div class="pisah"></div>
+                  <br />
+                  <div class="col-6 kanan">Nama Produk</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end" id="produkk">Misal</span>
+                  </div>
+
+                  <div class="col-6 kanan">Harga</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end" id="hargaa">Misal</span>
+                  </div>
+                  <br />
+                  <div class="pisah"></div>
+                  <br />
+                  <div class="col-6 kanan">Potongan</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end" id="">Rp.0</span>
+                  </div>
+                  <div class="col-6 kanan">Cashback</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end" id="">Rp.0</span>
+                  </div>
+                  <div class="col-6 kanan fw-bold">Total</div>
+                  <div class="col-6 kiri">
+                    <span class="float-end fw-bold" id="total">Misal</span>
+                  </div>
+                  <br />
+                  <div class="pisah"></div>
+                  <br />
+                  <p>Periksa Kembali ID Player dan Nickname, Pastikan tidak ada kesalahan</p>
+                  <br />
+                  <div class="col-6 kanan mt-3">
+                    <a class="btn ubah" data-bs-dismiss="offcanvas">Ubah</a>
+                  </div>
+                  <div class="col-6 kiri mt-3">
+                    <input type="hidden" name="catatan" id="catatan" value="" required />
+                    <input type="hidden" name="web" id="web" value="0" />
+                    <input type="hidden" name="aktivasi" id="kode" value="0" />
+                    <input type="hidden" name="id" id="id1" value="" />
+
+                    <button type="submit" class="btn konfir" id="tombol" style="display: ">Konfirmasi</button>
+                  </div>
+                </div>
+
+                <div data-bs-toggle="offcanvas" data-bs-target="#bayar" id="kl"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Produk -->
+  <div class="container mt-4">
+    <div class="row align-items-center" id="produk_diamond">
+      <div class="d-flex justify-content-center" style="margin-top: 50%" id="rol">
+        <div class="spinner-grow text-primary d-none" style="width: 3rem; height: 3rem" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row align-items-center d-none" id="produk_member">
+      <div class="d-flex justify-content-center" style="margin-top: 50%" id="rol1">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    // Variabel
+    const btnCek = document.querySelector('.btn-Cek');
+    const btnLoading = document.querySelector('.btn-Loading');
+    var keywoard = document.getElementById("nomor");
+    var load = document.getElementById("load");
+    var oprator = document.getElementById("nickname");
+    var salah = document.getElementById("tidak_valid");
+    var nick_tampil = document.getElementById("nick");
+    var validasi = "";
+    var zone = document.getElementById("server");
+    //var kode_server = "";
+    // Atur jika ke digi menggunakan kode server
+    var url = "https://hprstopupcentre.com/solusi-media/api/produk_pulsa.php?kategori=";
+
+    // idr
+    let xsaldo = document.querySelectorAll(".mySALDO");
+    for (let i = 0, len = xsaldo.length; i < len; i++) {
+      let num = Number(xsaldo[i].innerHTML).toLocaleString("id");
+      xsaldo[i].innerHTML = num;
+      xsaldo[i].classList.add("currSign");
+    }
+
+    //no cek id
+    keywoard.addEventListener('input', function() {
+      if (keywoard.value.length > 4) {
+        var x = keywoard.value.substr(0, 4);
+        var y = keywoard.value.substr(4, 1);
+        if (keywoard.value.length < 4) {
+          keywoard.classList.add('is-invalid');
+          keywoard.classList.remove('is-valid');
+          salah.innerText = "Masukan 6-13 Digit";
+          $('#produk_diamond').empty();
+          $('#produk').empty();
+          $('#rol').append(`Ketikan Nomor Tujuan`)
+          $('#produk').append(`<option id="" value="">Pilih Produk</option>`);
+          // telkomsel
+        } else if (x == 0811 || x == 0812 || x == 0813 || x == 0821 || x == 0822 || x == 0852 || x == 0853 || x == 0823 || x == 0851) {
+          if (x == 0851 && y == 5 || x == 0851 && y == 6 || x == 0851 && y == 7) {
+
+            keywoard.classList.remove('is-invalid');
+            keywoard.classList.add('is-valid');
+            oprator.innerText = "By U"
+
+            tampil_kategori(coll + produk1 + + opbyu);
+
+          } else {
+            keywoard.classList.remove('is-invalid');
+            keywoard.classList.add('is-valid');
+            oprator.innerText = "TELKOMSEL"
+
+            tampil_kategori(coll + produk1 + + optsel);
+          }
+          // Indosat
+        } else if (x == 0814 || x == 0815 || x == 0816 || x == 0855 || x == 0856 || x == 0857 || x == 0858) {
+          keywoard.classList.remove('is-invalid');
+          keywoard.classList.add('is-valid');
+          oprator.innerText = "INDOSAT"
+
+          tampil_kategori(coll + produk1 + + opisat);
+        }
+        // Tri
+        else if (x == 0895 || x == 0896 || x == 0897 || x == 0898 || x == 0899) {
+          keywoard.classList.remove('is-invalid');
+          keywoard.classList.add('is-valid');
+          oprator.innerText = "THREE"
+
+          tampil_kategori(coll + produk1 + + optri);
+        }
+        // Axis
+        else if (x == 0838 || x == 0831 || x == 0832 || x == 0833) {
+          keywoard.classList.remove('is-invalid');
+          keywoard.classList.add('is-valid');
+          oprator.innerText = "AXIS"
+
+          tampil_kategori(coll + produk1 + + opaxis);
+        }
+        // XL
+        else if (x == 0818 || x == 0817 || x == 0819 || x == 0859 || x == 0877 || x == 0878) {
+          keywoard.classList.remove('is-invalid');
+          keywoard.classList.add('is-valid');
+          oprator.innerText = "XL"
+
+          tampil_kategori(coll + produk1 + + opxl);
+        }
+        // Smartfreen
+        else if (x == 0881 || x == 0882 || x == 0883 || x == 0884 || x == 0885 || x == 0886 || x == 0887 || x == 0888 || x == 0889) {
+          keywoard.classList.remove('is-invalid');
+          keywoard.classList.add('is-valid');
+          oprator.innerText = "SMARTFREEN"
+
+          tampil_kategori(coll + produk1 + + opsmart);
+        }
+      }
+    });
+
+
+
+
+
+    // Kategori
+    function tampil_kategori(tag) {
+      $.getJSON("https://hprstopupcentre.com/solusi-media/api/sub_kategori.php?kategori=pubg-mobile-256385&link=" + link + "&token=" + aktivasi + "&tag=" + tag, function(data) {
+        if (data != null) {
+          $("#produk_diamond").empty();
+          $("#produk").empty();
+          var idp = data[0]["link"];
+
+          tampil_produk(idp);
+          for (let i = 0; i < data.length; i++) {
+            var nama = data[i]["Judul"];
+            var id_produk = data[i]["link"];
+
+            $("#produk").append(
+              `
+                        <option id="` +
+              id_produk +
+              `" value="` +
+              id_produk +
+              `" >` +
+              nama +
+              `</option>
+
+                        `
+            );
+          }
+        } else {
+          $("#produk").append(`
+                        <option id="" value="">Pilih Kategori</option>
+
+                        `);
+        }
+      });
+    }
+
+    function tampil_produk(linknya) {
+      var kategori = document.getElementById("produk").value;
+      $("#produk_diamond").empty();
+      Loading();
+
+      if (linknya.length < 3) {
+        var urlku = url + kategori + "&link=" + link + "&token=" + aktivasi;
+      } else {
+        var urlku = url + linknya + "&link=" + link + "&token=" + aktivasi;
+      }
+      $.getJSON(urlku, function(data) {
+        console.log(kategori);
+        if (data != null) {
+          $("#produk_diamond").empty();
+          for (let i = 0; i < data.length; i++) {
+            var nama = data[i]["Judul"];
+            var id_produk = data[i]["link"];
+            var harga = data[i]["harga"];
+
+            $("#produk_diamond").append(
+              `
+<div class=" col-12 mb-3" onclick="klik(\'` +
+              harga +
+              `\',\'` +
+              nama +
+              `\',\'` +
+              id_produk +
+              `\')">
+<div class="container base shadow-sm produk" onmouseenter="document.getElementById('` +
+              id_produk +
+              `').style='color:white'" onmouseleave="document.getElementById('` +
+              id_produk +
+              `').style='color:#355EB2'" selected>
+<h6 id="` + id_produk + `">
+  <b>` + nama + `</b></h6>
+  ` + harga + `
+  </div>
+</div>`
+            );
+          }
+        } else {
+          $("#produk_diamond").empty();
+          $("#produk_diamond").append(`
+                    <div class="d-flex justify-content-center " style="margin-top:50%" id="rol">
+     Tidak Ada Produk
+      </div>`);
+        }
+      });
+    }
+
+    // Loading
+    function Loading() {
+      $("#produk_diamond").append(`
+                    <div class="d-flex justify-content-center " style="margin-top:50%" id="rol">
+      <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+      </div>
+      </div>`);
+    }
+
+
+    function klik(harga, nama, value) {
+      var catatan = document.getElementById("nomor").value;
+      if (catatan.length < 8) {
+        Swal.fire({
+          icon: 'error',
+          title: 'masukan nomor',
+        });
+      } else if (validasi == "") {
+        document.getElementById("kl").click();
+        document.getElementById("id1").value = value;
+        document.getElementById("catatan").value = catatan;
+        document.getElementById("web").value = link;
+        document.getElementById("kode").value = aktivasi;
+        document.getElementById("player1").innerHTML = catatan;
+        document.getElementById("produkk").innerText = nama;
+        document.getElementById("hargaa").innerText = harga;
+        document.getElementById("total").innerText = harga;
+      } else {
+        document.getElementById("kl").click();
+        document.getElementById("id1").value = value;
+        document.getElementById("catatan").value = catatan;
+        document.getElementById("web").value = link;
+        document.getElementById("kode").value = aktivasi;
+        document.getElementById("player1").innerHTML = catatan;
+        document.getElementById("produkk").innerText = nama;
+        document.getElementById("hargaa").innerText = harga;
+        document.getElementById("total").innerText = harga;
+      }
+    }
+    
+    
+    const coll = "collapse_aside"; //tidak untuk di ganti
+    document.querySelector('#title').innerHTML = titel;
+    document.querySelector('.inptUser1').innerHTML = inptUser;
+  </script>
+</body>
+
+</html>
